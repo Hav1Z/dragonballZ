@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <link rel="stylesheet" href="index.css">
+
+    <div id="arena">
+
+        <div id="kamehameha" style="left: 400px; top: 15px;"></div>
+       
+        <div id="barraminicell" style="left: 650px; top: 15px;"></div>
+        
+        <div id="cuadrovidaminicell" style="left: 650px; top: 15px;"></div>
+    
+        <div id="goku5" style="left: 75px; top:400px" ></div>
+
+        <div id="minicell" style="left: 650px; top: 400px;"> </div>
+        
+        <div id="barravidagoku" style="left: 20px; top:15px"></div>
+
+        <div id="cuadrovidagoku" style="left: 20px; top:15px"></div>
+        
+       </div>
+
+
+
+       <script type="text/javascript">
+           let goku5 = document.getElementById("goku5");
+           let velocidad = 50; //<----cambiar velocidad
+           let mTop = 0;
+           let mLeft = 0;
+
+           document.addEventListener("keydown", function(e){
+
+            if (e.keyCode == "39") { //DERECHA
+                moverDerecha();
+            }
+
+           if (e.keyCode == "37"){ //IZQUIERDA
+               moverIzquierda();
+           }
+           if (e.keyCode == "40"){ //ABAJO
+               moverAbajo();
+           }
+           if (e.keyCode == "38"){ //ARRIBA
+               moverArriba();
+           }
+
+           })
+
+           function moverDerecha(){
+            mLeft += velocidad;
+            goku5.style.marginLeft = mLeft +"px";
+           }
+
+           function moverIzquierda(){
+            mLeft -= velocidad;
+            goku5.style.marginLeft = mLeft +"px"; 
+           }
+           function moverArriba(){
+            mTop -= velocidad;
+            goku5.style.marginTop = mTop +"px";
+           }
+
+           function moverAbajo(){
+            mTop += velocidad;
+            goku5.style.marginTop = mTop +"px"; 
+           } 
+           
+        
+
+        </script>
+
+  </body>
+
+</html>
